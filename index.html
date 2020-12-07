@@ -214,6 +214,9 @@
         crossorigin="anonymous"></script>
     <script type="text/javascript">
         $('.owl-carousel').owlCarousel({
+            autoplay:true,
+            autoplayHoverPause: true,
+            autoplayTimeout:2000,
             loop: true,
             margin: 10,
             nav: false,
@@ -234,10 +237,14 @@
                     items: 3
                 },
                 1200: {
-                    items: 4
+                    items: 3
                 }
             }
+            
         })
+        $('.play').on('click',function(){
+    owl.trigger('play.owl.autoplay',[2000])
+})
     </script>
 </body>
 
